@@ -1,0 +1,320 @@
+/* Importando tema MilkMoo */
+@import url("../milkymoo-theme.css");
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap');
+
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    /* Fundo suave, sem o padrão de manchas que pode ter ficado estranho */
+    background: linear-gradient(135deg, #fefefe 0%, var(--cream) 100%);
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header estilizado - Foco na organização e cores Milkymoo */
+header {
+    background: var(--accent); /* Fundo branco */
+    border-bottom: 5px solid var(--primary); /* Linha rosa forte */
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex; /* Usar flexbox para melhor controle */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-text {
+    flex-shrink: 0; /* Não encolher */
+}
+
+.header-text h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary); /* Rosa */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.1rem;
+}
+
+.header-text p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Botão do Carrinho - Rosa/Branco */
+.btn-carrinho {
+    background: linear-gradient(135deg, var(--primary), #FFC0CB);
+    color: var(--accent);
+    border: 2px solid var(--primary);
+    box-shadow: 0 3px 12px rgba(255, 105, 180, 0.4);
+}
+
+.btn-carrinho:hover {
+    background: linear-gradient(135deg, #FFC0CB, var(--primary));
+    color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.carrinho-badge {
+    background: var(--secondary); /* Preto */
+    color: var(--accent);
+    border: 2px solid var(--primary);
+}
+
+/* Botão Menu - Preto/Branco */
+.btn-menu {
+    background: var(--secondary);
+    color: var(--accent);
+    border: 2px solid var(--secondary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-menu:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Filter no header - Mais discreto e funcional */
+.header-filter {
+    flex-grow: 1; /* Ocupar o espaço restante */
+    max-width: 600px;
+    background: var(--cream);
+    padding: 0.8rem 1rem;
+    border-radius: 15px;
+    border: 1px solid var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.filter-group label {
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.header-filter select,
+.header-filter input[type="text"] {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    background: var(--accent);
+    color: var(--text-dark);
+}
+
+.header-filter select:focus,
+.header-filter input[type="text"]:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.3);
+}
+
+.filter-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.header-filter .btn-filter {
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.btn-buscar {
+    background: var(--primary);
+    color: var(--accent);
+}
+
+.btn-buscar:hover {
+    background: #FFC0CB;
+    color: var(--secondary);
+}
+
+.btn-limpar {
+    background: var(--secondary);
+    color: var(--accent);
+}
+
+.btn-limpar:hover {
+    background: #333333;
+}
+
+/* Main container */
+main {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Produtos grid */
+.produtos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cards um pouco maiores */
+    gap: 2rem;
+}
+
+/* Card do produto - Mais limpo e Milkymoo */
+.produto-card {
+    background: var(--accent);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--cream);
+    overflow: hidden;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.3);
+    border-color: var(--primary);
+}
+
+.produto-imagem {
+    height: 200px; /* Imagem maior */
+    background: var(--cream);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produto-imagem::before {
+    content: '🍦';
+    font-size: 5rem;
+    opacity: 0.1;
+}
+
+.produto-info {
+    padding: 1.5rem;
+    text-align: left; /* Alinhamento à esquerda para melhor leitura */
+}
+
+.produto-nome {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.produto-categoria {
+    font-size: 0.8rem;
+    color: var(--primary);
+    background: var(--cream);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    border: 1px solid var(--primary);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.produto-preco {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.produto-estoque {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* Botão adicionar ao carrinho - Rosa vibrante */
+.btn-adicionar-carrinho {
+    background: linear-gradient(135deg, var(--primary), #FFC0CB);
+    color: var(--secondary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+}
+
+.btn-adicionar-carrinho:hover:not(:disabled) {
+    background: linear-gradient(135deg, #FFC0CB, var(--primary));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+}
+
+/* Footer */
+footer {
+    background: var(--secondary);
+    color: var(--accent);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header-filter {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-filter select,
+    .header-filter input[type="text"] {
+        width: 100%;
+    }
+
+    .header-actions {
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}

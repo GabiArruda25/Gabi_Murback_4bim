@@ -1,0 +1,211 @@
+/* =================================================================
+   milkymoo-theme.css - Tema Global MilkMoo
+   Este arquivo define as variáveis de cor e estilos base para todos os CRUDs.
+   ================================================================= */
+
+:root {
+    /* Paleta de cores MilkMoo (Vaquinha) */
+    --primary: #FF69B4; /* Rosa MilkMoo */
+    --secondary: #000000; /* Preto (Manchas da Vaca) */
+    --accent: #FFFFFF; /* Branco (Corpo da Vaca) */
+    --dark-brown: #8B4513; /* Marrom (Chocolate/Café) */
+    --cream: #F0F8FF; /* Azul Claro (Céu) */
+    --gold: #FFD700; /* Dourado (Detalhes) */
+    --bg-light: #FFFFFF;
+    --text-dark: #000000;
+    --text-light: #333333;
+    --shadow-color: rgba(255, 105, 180, 0.3);
+    --shadow-sm: 0 4px 15px var(--shadow-color);
+    --shadow-md: 0 8px 25px var(--shadow-color);
+    --shadow-lg: 0 15px 50px rgba(139, 111, 71, 0.2);
+    --radius-md: 15px;
+    --radius-lg: 25px;
+    --transition: all 0.3s ease;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos base para o corpo */
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--cream) 50%, #F5F5F5 100%);
+    color: var(--text-dark);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Estilos de Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--accent);
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de Seção */
+section {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos de Formulário */
+.search-container {
+    background: var(--cream);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 2px solid var(--primary);
+}
+
+.search-container label, fieldset legend, .form-group label {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    border: 2px solid var(--primary);
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.3);
+}
+
+/* Estilos de Botão */
+button {
+    transition: var(--transition);
+    border: 1px solid var(--secondary);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), #FFC0CB);
+    color: var(--secondary);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #FFC0CB, var(--primary));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary), var(--text-dark));
+    color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--text-dark), var(--secondary));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-save {
+    background: linear-gradient(135deg, var(--gold), var(--primary));
+    color: var(--text-dark);
+}
+
+.btn-save:hover {
+    background: linear-gradient(135deg, var(--primary), var(--gold));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #FF4500, #DC143C);
+    color: var(--accent);
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #DC143C, #FF4500);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 69, 0, 0.4);
+}
+
+.btn-cancel {
+    background: linear-gradient(135deg, #A9A9A9, #696969);
+    color: var(--accent);
+}
+
+.btn-cancel:hover {
+    background: linear-gradient(135deg, #696969, #A9A9A9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(169, 169, 169, 0.4);
+}
+
+.btn-id {
+    background: var(--cream);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-id:hover {
+    background: var(--primary);
+    color: var(--accent);
+}
+
+/* Estilos de Tabela */
+table thead {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--accent);
+}
+
+table tbody tr:hover {
+    background-color: var(--cream);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--accent);
+}
+
+table tbody tr:nth-child(even):hover {
+    background-color: var(--cream);
+}
+
+/* Estilos de Mensagem */
+.message.success {
+    background: linear-gradient(135deg, #D4EDDA, #C3E6CB);
+    color: #155724;
+    border: 1px solid #C3E6CB;
+}
+
+.message.error {
+    background: linear-gradient(135deg, #F8D7DA, #F5C6CB);
+    color: #721C24;
+    border: 1px solid #F5C6CB;
+}
+
+.message.warning {
+    background: linear-gradient(135deg, #FFF3CD, #FFEBAF);
+    color: #856404;
+    border: 1px solid #FFEBAF;
+}
+
+.message.info {
+    background: linear-gradient(135deg, #D1ECF1, #BEE5EB);
+    color: #0C5460;
+    border: 1px solid #BEE5EB;
+}
+
+/* Estilos de Footer */
+footer {
+    background: var(--secondary);
+    color: var(--accent);
+}

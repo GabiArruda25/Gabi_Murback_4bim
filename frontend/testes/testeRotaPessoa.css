@@ -1,0 +1,61 @@
+@import url("../milkymoo-theme.css");
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--cream) 50%, #F5F5F5 100%);
+}
+
+h1 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+}
+
+.card {
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+input,
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--accent);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFC0CB;
+    color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-md);
+    min-height: 50px;
+    background-color: var(--cream);
+}
+
+.hidden {
+    display: none;
+}
